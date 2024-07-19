@@ -13,14 +13,29 @@ Requirements
 <li>Node.j</li>
 <li>MySQL</li>
 <h3>USAGE</h3>
-first clone my repo
+1.first clone my repo
 git clone https://github.com/kathleenjebet/obituarysite.git<br>
-cd your-obituary site
+cd obituarysite<br>
 2.install dependancies using npm install ensuring you have node.js already installed<br>
-3.ensure you have a db connection ensuring to have your db name and table
+3.ensure you have a db connection having to change to your db name and table name <br>
 4.run the function node servername.js
 it should be running on http://localhost:3000.
 <h3>File details</h3>
+<ul>
+<li>viewob.js-it is used to retrive ob data from database</li>
+<li>viewob.html-form for display the retrived data</li>
+<li>submitob.js-sends ob data to database</li>
+<li>obformplt.html-form for where data is inserted</li>
+<li>packages-Directory where dependencies are installed.</li>
+
+
+
+
+
+</ul>
+
+
+
 
 
 
