@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="<%= keywords %>">
+    <meta property="og:title" content="<%= title %>">
+    <meta property="og:description" content="<%= description %>">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="<%= `http://localhost:3000/obituary/${obituary.id}` %>">
+    <meta property="og:image" content="<%= `http://localhost:3000/images/${obituary.id}.jpg` %>">
+    <link rel="canonical" href="<%= `http://localhost:3000/obituary/${obituary.id}` %>">
+    <style>
+        body {
+            text-align: center;
+            background-color: pink;
+            color: white;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        fieldset {
+            border: 1px solid white;
+            display: inline-block;
+            padding: 20px;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        legend {
+            text-align: center;
+            font-size: 1.5em;
+        }
+    </style>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Obituary",
+          "name": "<%= obituary.name %>",
+          "birthDate": "<%= obituary.birth %>",
+          "deathDate": "<%= obituary.death %>",
+          "author": {
+            "@type": "Person",
+            "name": "<%= obituary.author %>"
+          },
+          "description": "<%= description %>"
+        }
+        </script>
+        
+</head>
+<body>
+    <h1>Obituary for <%= obituary.name %></h1>
+    <p>Date of Birth: <%= obituary.birth %></p>
+    <p>Date of Death: <%= obituary.death %></p>
+    <p>Author: <%= obituary.author %></p>
+    <p>Content: <%= obituary.content %></p>
+</body>
+</html>

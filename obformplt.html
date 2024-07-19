@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obituary Form</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: rgb(192, 255, 219);
+            color: white;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        fieldset {
+            border: 1px solid rgb(237, 27, 27);
+            display: inline-block;
+            padding: 20px;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        legend {
+            text-align: center;
+            font-size: 1.5em;
+        }
+        input[type="submit"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border: none;
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        input[type="submit"]:hover {
+            background-color: lightgray;
+        }
+        p {
+            margin: 10px 0;
+        }
+        input[type="text"], input[type="date"] {
+            width: calc(100% - 24px);
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            let id = document.forms["OBFORM"]["id"].value;
+            let name = document.forms["OBFORM"]["name"].value;
+            let birth = document.forms["OBFORM"]["birth"].value;
+            let death = document.forms["OBFORM"]["death"].value;
+            let content = document.forms["OBFORM"]["content"].value;
+            let author = document.forms["OBFORM"]["author"].value;
+    
+
+            if (id == "" || name == "" || birth == "" || death == "" || content == "" || author == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+<form name="OBFORM" method="post" action="/submit" onsubmit="return validateForm()">
+    <fieldset>
+        <legend>OBITUARY</legend>
+        <p><b>ID</b>: 
+            <input type="text" size="15" name="id">
+        </p>
+        <p><b>NAME</b>: 
+            <input type="text" size="15" name="name">
+        </p>
+
+        <p><b>DATE OF BIRTH</b>: 
+            <input type="date" name="birth">
+        </p>
+        <p><b>DATE OF DEATH</b>: 
+            <input type="date" name="death">
+        </p>
+        <p><b>CONTENT</b>: 
+            <input type="text" size="30" name="content">
+        </p>
+        <p><b>AUTHOR</b>: 
+            <input type="text" size="15" name="author">
+        </p>
+        <p>
+            <input type="submit" value="submit" />
+        </p>
+    </fieldset>
+</form>
+</body>
+</html>
