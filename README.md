@@ -28,11 +28,10 @@ it should be running on http://localhost:3000.
 <li>obformplt.html-form for where data is inserted</li>
 <li>packages-Directory where dependencies are installed.</li>
 
-
-
-
-
 </ul>
+<p>I have also added SEO adding meta tags and an ejs template and structured data
+</p>
+
 
 
 
