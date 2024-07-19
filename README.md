@@ -10,6 +10,22 @@ Retrieves data from a specified table.<br>
 Displays data on a web page.<br>
 Simple and easy-to-understand setup.<br>
 Requirements
-<li></li>Node.j</li>
-<li></li>MySQL</li>
+<li>Node.j</li>
+<li>MySQL</li>
+<h3>USAGE</h3>
+first clone my repo
+git clone https://github.com/kathleenjebet/obituarysite.git<br>
+cd your-obituary site
+2.install dependancies using npm install ensuring you have node.js already installed<br>
+3.ensure you have a db connection ensuring to have your db name and table
+4.run the function node servername.js
+it should be running on http://localhost:3000.
+<h3>File details</h3>
+
+
+
+
+
+
+
 
